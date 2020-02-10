@@ -1,0 +1,40 @@
+good
+{"type":"open","name":"Populated Sheet w formula","username":"admin","password":"password"}
+{"type":"open","name":"Empty Sheet","username":"admin","password":"password"}
+
+bad
+{"type":"open","name":"Populated Sheet w formula","username":"admin","password":"pasword"}
+
+non-existent login
+{"type":"open","name":"Populated Sheet w formula","username":"bryan","password":"pass"}
+
+new spreadsheet name
+{"type":"open","name":"New Sheet","username":"admin","password":"password"}
+
+undo:
+{"type": "undo"}
+{"type": "revert","cell":"A1"}
+
+{"type": "edit","cell": "C1","value": 2.0,"dependencies": []}
+
+{"type": "edit","cell": "A2","value": "how","dependencies": ["A1","B3"]}
+
+{"type": "edit","cell": "A3","value": "goes","dependencies": ["A1","B3"]}
+
+{"type": "edit","cell": "A4","value": "it","dependencies": ["A1","B3"]}
+
+admin:
+{"type":"admin"}
+
+new user
+{"type":"user","order":"new","username":"joe","password":"no"}
+change user password
+{"type":"user","order":"change","username":"joe","password":"yes"}
+delete user
+{"type":"user","order":"delete","username":"joe","password":""}
+
+new spreadsheet
+{"type":"sheet", "order":"new","name":"newerer spread"}
+{"type":"sheet", "order":"delete","name":"newerer spread"}
+
+{"type":"close"}
